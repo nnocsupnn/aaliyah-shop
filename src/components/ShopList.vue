@@ -75,8 +75,6 @@ export default {
 				return acc.concat(dealsItems);
 			}, []))
 
-		console.log(items.value)
-			
 
 		const categories = computed(() => Object.keys(deals));
 
@@ -105,8 +103,6 @@ export default {
 			return filteredItems.value.slice(start, end);
 		});
 
-		console.log(paginatedItems)
-
 		const prevPage = () => {
 			if (currentPage.value > 1) {
 				currentPage.value--;
@@ -131,7 +127,6 @@ export default {
 		};
 	},
 	mounted() {
-		console.log(this.paginatedItems)
 	}
 }
 </script>
