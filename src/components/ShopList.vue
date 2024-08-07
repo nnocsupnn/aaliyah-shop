@@ -54,6 +54,7 @@ export default {
 					const dealsValues = deal.Deals.split('\n')
 					let [ name ] = dealsValues
 					let [_rate, _ratings] = dealsValues[dealsValues.length -1].split(',')
+					console.log((dealsValues.length >= 3) ? dealsValues[2] : 0)
 
 					dealsItems.push({
 						category: key,
@@ -67,7 +68,8 @@ export default {
 						description: deal.Deals,
 						img_link: deal.Imagelink,
 						product_link: deal['Product link'],
-						price: 0
+						price: (dealsValues.length >= 3) ? dealsValues[2].split('(')[0] : 0,
+						full_price: (dealsValues.length >= 3) ? dealsValues[2] : 0
 					})
 				}
 

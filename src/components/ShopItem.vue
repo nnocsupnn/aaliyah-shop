@@ -70,12 +70,14 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #818181;
+  color: #e7e7e7;
 }
 
+.cart {
+  cursor: pointer;
+}
 .el-wrapper:hover .add-to-cart {
   left: 50%;
-  cursor: pointer;
 }
 
 .img {
@@ -146,7 +148,7 @@ body {
   /* ease-out */
   width: 660px;
   height: 100%;
-  background-color: #3f96cd;
+  background-color: #f1f1f1;
   position: absolute;
   left: -659px;
 }
@@ -154,7 +156,8 @@ body {
 .h-bg .h-bg-inner {
   width: 50%;
   height: 100%;
-  background-color: #464646;
+  /* background-color: #464646; */
+  background-image: linear-gradient( 135deg, #37005a69 10%, #a53c036b 100%);
 }
 
 .info-inner {
@@ -190,7 +193,8 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #8c8c8c;
+  color: #f1f1f1;
+  font-style: italic;
 }
 
 .a-size {
@@ -249,7 +253,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: 14px;
   color: #252525;
 }
 
@@ -284,6 +288,10 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+a {
+  text-decoration: none;
+}
 </style>
 <template>
   <div class="el-wrapper">
@@ -294,6 +302,7 @@ body {
         <div class="img-info">
           <div class="info-inner">
             <span class="p-name">{{ item.name }}</span>
+            <span class="p-company">${{ item.full_price }}</span>
           </div>
           <div class="a-size">
             {{ item.description }}
@@ -308,12 +317,12 @@ body {
         <div class="h-bg-inner"></div>
       </div>
 
-      <Rating :rate="item.ratings.rate" :ratings="item.ratings.ratings" />
+      <Rating :rate="item.ratings.rate || 1.0" :ratings="item.ratings.ratings" />
 
-      <a class="cart">
-        <span class="price">{{ item.promo_code }}</span>
+      <a class="cart" @click="copyCode(item.promo_code)">
+        <span class="price">${{ item.price }}</span>
         <span class="add-to-cart">
-          <span class="txt" @click="copyCode(item.promo_code)">{{ copyCodeText }}</span>
+          <span class="txt">{{ copyCodeText }}</span>
         </span>
       </a>
     </div>
