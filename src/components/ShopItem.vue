@@ -319,10 +319,10 @@ a {
 
       <Rating :rate="item.ratings.rate || 1.0" :ratings="item.ratings.ratings" />
 
-      <a class="cart" @click="copyCode(item.promo_code)">
+      <a class="cart" @click="copyCode(item)">
         <span class="price">${{ item.price }}</span>
         <span class="add-to-cart">
-          <span class="txt">{{ copyCodeText }}</span>
+          <span class="txt">{{ item.copyCodeText }}</span>
         </span>
       </a>
     </div>
@@ -349,11 +349,11 @@ export default {
     }
   },
   methods: {
-    copyCode(code) {
-      this.copyCodeText = 'Copied!'
-      navigator.clipboard.writeText(code)
+    copyCode(item) {
+      item.copyCodeText = 'Copied!'
+      navigator.clipboard.writeText(item.promo_code)
 
-      setInterval(() => this.copyCodeText = 'Copy Code', 800)
+      setInterval(() => item.copyCodeText = 'Copy Code', 800)
     }
   },
   mounted() {
