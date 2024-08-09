@@ -18,7 +18,10 @@ const sheetData = {};
 	});
 
 	// First 10 and sort it by latest added sheet
-	const sheetsList = resSheets.data.sheets.slice(0, 10).sort((a, b) => b.id - a.id);
+	const sheetsList = resSheets.data.sheets.slice(0, 10).sort((a, b) => {
+		return a.properties.index - b.properties.index
+	});
+
 	if (sheetsList && sheetsList.length > 0) {
 		// Iterate over each sheet
 		for (let sheet of sheetsList) {
@@ -59,7 +62,9 @@ const sheetData = {};
 		// Once all sheets are processed, output the final JSON structure
 		if (Object.keys(sheetData).length === sheetsList.length) {
 			// console.log(JSON.stringify(sheetData, null, 2));  // Pretty print JSON
-			fs.writeFileSync(process.env.OUTPUT_PATH, JSON.stringify(sheetData, null, 2))
+			process.env.OUTPUT_PATH.split(',').map(path => {
+				fs.writeFileSync(path, JSON.stringify(sheetData, null, 2))
+			})
 		}
 
 		console.info("Generating done. ", process.env.OUTPUT_PATH)

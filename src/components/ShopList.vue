@@ -45,7 +45,16 @@ export default {
 		ShopFooter
 	},
 	setup() {
-		const selectedCategory = ref(Object.keys(deals)[0]);
+		const categories_ = Object.keys(deals)
+		
+		// .sort((a, b) => {
+		// 	const numA = parseInt(a.match(/\d+/)[0], 10);
+  		// 	const numB = parseInt(b.match(/\d+/)[0], 10);
+		// 	console.log(numA, numB)
+		// 	return numB - numA
+		// })
+
+		const selectedCategory = ref(categories_[0]);
 
 		let items = ref(Object.entries(deals).reduce((acc, [key, itemsx]) => {
 				const dealsItems = []
@@ -76,7 +85,7 @@ export default {
 			}, []))
 
 
-		const categories = computed(() => Object.keys(deals));
+		const categories = computed(() => categories_);
 
 		const currentPage = ref(1);
 		const itemsPerPage = 9;
