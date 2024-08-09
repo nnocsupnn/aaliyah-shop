@@ -68,6 +68,7 @@ export default {
 						category: key,
 						id: deal.Seq,
 						name: name,
+						copyCodeText: 'Copy Code',
 						promo_code: deal.Code,
 						ratings: {
 							rate: (_rate == undefined) ? 0.0 : parseFloat(_rate.split(' ')[1]),
