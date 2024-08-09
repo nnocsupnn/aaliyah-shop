@@ -125,6 +125,8 @@ export default {
 			}
 		};
 
+		document.title = `${selectedCategory.value} | Aaliyah Awesome Deals`
+
 		return {
 			items,
 			categories,
@@ -135,6 +137,11 @@ export default {
 			prevPage,
 			nextPage
 		};
+	},
+	watch: {
+		selectedCategory(d) {
+			document.title = `${d} | Aaliyah Awesome Deals`
+		}
 	},
 	mounted() {
 	}
