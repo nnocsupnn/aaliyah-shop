@@ -33,9 +33,9 @@
 <script>
 import ShopItem from './ShopItem.vue';
 import ShopHeader from './ShopHeader.vue';
-import deals from '../../deals.json'
 import { computed, ref } from 'vue';
 import ShopFooter from './ShopFooter.vue';
+import deals from '../../public/deals.json';
 
 export default {
 	name: 'ShopList',
