@@ -50,7 +50,9 @@
     </div>
     <footer>
       <hr />
-      © 2024 AaliyahShop
+      © 2024 &dash; Aaliyah Amazing Deals 
+      <br/>
+      <br/>
     </footer>
   </div>
 </template>
@@ -58,6 +60,10 @@
 <style scoped>
 h3 {
   color: antiquewhite;
+}
+
+.heading h3 {
+  color: #fefefe !important;
 }
 
 .details {
@@ -114,6 +120,8 @@ footer {
   text-align: center;
   margin-bottom: 2rem;
   color: #fff;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 footer hr {

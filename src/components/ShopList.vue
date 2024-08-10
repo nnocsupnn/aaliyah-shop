@@ -265,13 +265,24 @@ select {
 }
 
 @media (min-width: 420px) and (max-width: 450px) {
-  .grid-container {
-    grid-template-columns: repeat(1, minmax(150px, 1fr));
-  }
+	.grid-container {
+		grid-template-columns: repeat(1, minmax(150px, 1fr));
+	}
 
-  .grid-item {
-    padding: 12px;
-  }
+	.grid-item {
+		padding: 12px;
+	}
+}
+
+
+@media (min-width: 320px) and (max-width: 450px) {
+	.grid-container {
+		grid-template-columns: repeat(1, minmax(150px, 1fr));
+	}
+
+	.grid-item {
+		padding: 12px;
+	}
 }
 
 
