@@ -44,7 +44,7 @@
         <hr/>
         <p>
         <h3>Contact Us</h3>
-        <a href="mail:DiscountsByAli@gmail.com"><i class="fa fa-envelope"></i>&nbsp;DiscountsByAli@gmail.com</a>
+        <a href="mail:ali.rinabor@gmail.com"><i class="fa fa-envelope"></i>&nbsp;ali.rinabor@gmail.com</a>
         </p>
       </div>
     </div>
