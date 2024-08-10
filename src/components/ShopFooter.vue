@@ -2,7 +2,7 @@
 
   <div class="footer">
     <div class="heading">
-      <h3>Aaliyah <sup>Shop</sup></h3>
+      <h3><i class="fa fa-shopping-bag"></i>&nbsp;Aaliyah <sup>Shop</sup></h3>
     </div>
     <div class="content">
       <div class="services">
@@ -34,7 +34,7 @@
           <h3>Amazon Associates Program</h3>
           <br/>
 
-          I am a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to
           provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. My website
           contains affiliate links, meaning, if you click through and make a purchase or sign up for a program, I may
           earn a commission. This is at no additional cost to you. Some posts may contain Sponsored Links which are in
@@ -50,7 +50,7 @@
     </div>
     <footer>
       <hr />
-      © 2024 &dash; Aaliyah Amazing Deals 
+      © 2024 &dash; <i class="fa fa-shopping-bag"></i>&nbsp;Aaliyah Amazing Deals 
       <br/>
       <br/>
     </footer>
@@ -122,6 +122,7 @@ footer {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
 }
 
 footer hr {
