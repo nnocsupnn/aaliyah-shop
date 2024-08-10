@@ -6,6 +6,8 @@
 				<option v-for="deal in categories" :key="deal" :value="deal">{{ deal }}</option>
 			</select>
 		</div>
+		
+
 		<div class="grid-container">
 			<ShopItem class="grid-item" v-for="item in paginatedItems" :key="item.id" :item="item"/>
 		</div>
@@ -15,6 +17,8 @@
 			<span>Page {{ currentPage }} of {{ totalPages }}</span>
 			<button class="pagination-btn" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
 		</div>
+
+		<ShopScrollToTop/>
 
 		<ShopFooter/>
 	</div>
@@ -36,13 +40,15 @@ import ShopHeader from './ShopHeader.vue';
 import { computed, ref } from 'vue';
 import ShopFooter from './ShopFooter.vue';
 import deals from '../../public/deals.json';
+import ShopScrollToTop from './ShopScrollToTop.vue';
 
 export default {
 	name: 'ShopList',
 	components: {
 		ShopItem,
 		ShopHeader,
-		ShopFooter
+		ShopFooter,
+		ShopScrollToTop
 	},
 	setup() {
 		const categories_ = Object.keys(deals)
@@ -149,6 +155,9 @@ export default {
 </script>
 
 <style scoped>
+.shop {
+	width: 100% !important;
+}
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -251,9 +260,20 @@ select {
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	grid-gap: 35px;
 	/* Adjust the gap between items as needed */
 }
+
+@media (min-width: 420px) and (max-width: 450px) {
+  .grid-container {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+  }
+
+  .grid-item {
+    padding: 12px;
+  }
+}
+
 
 .grid-item {
 	padding: 20px;

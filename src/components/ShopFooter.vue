@@ -1,72 +1,83 @@
 <template>
 
-    <div class="footer">
-        <div class="heading">
-            <h3>Aaliyah <sup>Shop</sup></h3>
-        </div>
-        <div class="content">
-            <!-- <div class="services">
-                <h4>Services</h4>
-                <p><a href="#">App development</a></p>
-                <p><a href="#">Web development</a></p>
-                <p><a href="#">DevOps</a></p>
-                <p><a href="#">Web designing</a></p>
-            </div> -->
-            <!-- <div class="social-media">
-                <h4>Social</h4>
+  <div class="footer">
+    <div class="heading">
+      <h3>Aaliyah <sup>Shop</sup></h3>
+    </div>
+    <div class="content">
+      <div class="services">
+                <!-- <h4>Services</h4> -->
+                <!-- <p><a href="#">money-saving deals</a></p>
+                <p><a href="#">hard to find items</a></p>
+                <p><a href="#">markdowns</a></p>
+                <p><a href="#">sales</a></p>
+                <p><a href="#">clearances</a></p>
+                <p><a href="#">coupons</a></p>
+                <p><a href="#">promo codes</a></p>
+                <p><a href="#">free shipping codes</a></p> -->
+            </div>
+      <div class="social-media">
+                <!-- <h3>Contact Email</h3>
                 <p>
-                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                </p>
-                <p>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                </p>
-                <p>
-                    <a href="https://github.com/farazc60"><i class="fab fa-github"></i> Github</a>
-                </p>
-                <p>
-                    <a href="https://www.facebook.com/codewithfaraz"><i class="fab fa-facebook"></i> Facebook</a>
-                </p>
-                <p>
-                    <a href="https://www.instagram.com/codewithfaraz"><i class="fab fa-instagram"></i> Instagram</a>
-                </p>
-            </div> -->
-            <!-- <div class="links">
-                <h4>Quick links</h4>
+                    <a href="mail:DiscountsByAli@gmail.com"><i class="fa fa-envelope"></i>&nbsp;DiscountsByAli@gmail.com</a>
+                </p> -->
+            </div>
+      <div class="links">
+                <!-- <h4>Quick links</h4>
                 <p><a href="#">Home</a></p>
                 <p><a href="#">About</a></p>
                 <p><a href="#">Blogs</a></p>
-                <p><a href="#">Contact</a></p>
-            </div> -->
-            <div class="details">
-                <p>
-                    Hi there thrifty shoppers, I love saving you money with my fantastic daily deals. - Happy Shopping!
-                </p>
+                <p><a href="#">Contact</a></p> -->
             </div>
-        </div>
-        <footer>
-            <hr />
-            © 2024 AaliyahShop
-        </footer>
+      <div class="details">
+        <p>
+          <h3>Amazon Associates Program</h3>
+          <br/>
+
+          I am a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to
+          provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. My website
+          contains affiliate links, meaning, if you click through and make a purchase or sign up for a program, I may
+          earn a commission. This is at no additional cost to you. Some posts may contain Sponsored Links which are in
+          the form of Banner Ads, Image and Text Links.
+        </p>
+        <br/>
+        <hr/>
+        <p>
+        <h3>Contact Us</h3>
+        <a href="mail:DiscountsByAli@gmail.com"><i class="fa fa-envelope"></i>&nbsp;DiscountsByAli@gmail.com</a>
+        </p>
+      </div>
     </div>
+    <footer>
+      <hr />
+      © 2024 AaliyahShop
+    </footer>
+  </div>
 </template>
 
 <style scoped>
-.details {
-    color: #fff;
+h3 {
+  color: antiquewhite;
 }
+
+.details {
+  color: #fff;
+}
+
 .footer {
   /* background-color: rgb(192, 188, 192); */
-  background-image: linear-gradient( 135deg, #37005a69 10%, #a53c036b 100%);
+  background-image: linear-gradient(135deg, #37005a69 10%, #a53c036b 100%);
   color: #060606;
   width: 100%;
   bottom: 0;
   left: 0;
 }
 
+
 .footer .heading {
   color: #fefefe;
-  max-width: 1010px;
-  width: 90%;
+  max-width: 98%;
+  width: 100%;
   text-transform: uppercase;
   margin: 30% auto;
   margin-bottom: 3rem;
@@ -75,6 +86,8 @@
 
 .footer .content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   margin: 1.5rem;
 }
@@ -120,6 +133,7 @@ footer hr {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
   .footer .content,
   .footer {
     font-size: 14px;

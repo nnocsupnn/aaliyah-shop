@@ -10,7 +10,7 @@ export default {
     data() {
         return {
             isVisible: false
-        };
+        }
     },
     methods: {
         scrollToTop() {
@@ -38,13 +38,12 @@ export default {
     z-index: 999999999999;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-image: linear-gradient(15deg, #37005a69 10%, #a53c036b 100%);
     color: white;
-    border: none;
+    border: 1px solid white;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    display: none;
+    border-radius: 20px;
 }
 
 .scroll-to-top:visible {
