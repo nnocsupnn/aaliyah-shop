@@ -317,7 +317,7 @@ a {
         <div class="h-bg-inner"></div>
       </div>
 
-      <Rating :rate="item.ratings.rate || 1.0" :ratings="item.ratings.ratings" />
+      <!-- <Rating :rate="item.ratings.rate || 1.0" :ratings="item.ratings.ratings" /> -->
 
       <a class="cart" @click="copyCode(item)">
         <span class="price">${{ item.price }}</span>
