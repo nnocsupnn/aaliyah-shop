@@ -30,7 +30,7 @@
 		<p>
 		<h3>Introduction</h3>
 
-		This is the Privacy Policy of DiscountsByAli (“we”, “them”, or “us”).In this Privacy Policy, we refer to my
+		This is the Privacy Policy of ali.rinabor@gmail.com (“we”, “them”, or “us”).In this Privacy Policy, we refer to my
 		website and services as the “Application.” Please read on to learn more about my data handling practices.
 		Your use of the Application signifies that you agree with the terms of this Privacy Policy. If you do not
 		agree with the terms of this Privacy Policy, do not use the Application.
@@ -93,7 +93,7 @@
 		<p>
 		<h3>Contact Information</h3>
 
-		If you have any questions about this Privacy Policy, please contact me at discountsbyali@gmail.com. Any
+		If you have any questions about this Privacy Policy, please contact me at ali.rinabor@gmail.com. Any
 		personally identifiable information provided in connection with inquiries related to this Privacy Policy
 		will be used solely for the purpose of responding to the inquiry and consistent with my Privacy Policy.</p>
 	</ShopModal>
