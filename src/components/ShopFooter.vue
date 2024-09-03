@@ -41,6 +41,7 @@
           the form of Banner Ads, Image and Text Links.
         </p>
         <br/>
+        #ad #commissionsearned
         <hr/>
         <p>
         <h3>Contact Us</h3>

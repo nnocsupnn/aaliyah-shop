@@ -301,11 +301,11 @@ a {
 
         <div class="img-info">
           <div class="info-inner">
-            <span class="p-name">{{ item.name }}</span>
+            <span class="p-name">{{ item.name }} #ad</span>
             <span class="p-company">${{ item.full_price }}</span>
           </div>
           <div class="a-size">
-            {{ item.description }}
+            {{ item.description }} #ad
           </div>
         </div>
       </a>
