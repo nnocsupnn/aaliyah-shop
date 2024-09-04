@@ -3,10 +3,14 @@
 		<div class="bg-image"></div>
 		<div class="overlay">
 			<h2>Aaliyah's Amazing Deals</h2>
-			<p>Codes, Coupons, Price Drop and Glitches
-
+			<div class="ad">
+				<h2 style="font-size: 28px !important;font-family: 'Open Sans';">Providing for Your Online Shopping Experience</h2 style="font-size: 28px !important;">
+				<p style="font-family: 'Open Sans' sans-serif;">money-saving deals,	hard to find items,	markdowns, sales, clearances, coupons, promo codes, free shipping codes</p>
+			</div>
+			<hr>
+			<p style="font-style: italic;font-weight: bold;">
 				<br />
-				Welcome to our shop. Please read our
+				Welcome to our shop. <br/>Please read our
 				<a href="#" @click.prevent="openModal('disclaimer')">Disclaimer and Disclosure</a>
 				and
 				<a href="#" @click.prevent="openModal('privacy')">Privacy Policy</a>.
@@ -30,10 +34,10 @@
 		<p>
 		<h3>Introduction</h3>
 
-		This is the Privacy Policy of ali.rinabor@gmail.com (“we”, “them”, or “us”).In this Privacy Policy, we refer to my
-		website and services as the “Application.” Please read on to learn more about my data handling practices.
-		Your use of the Application signifies that you agree with the terms of this Privacy Policy. If you do not
-		agree with the terms of this Privacy Policy, do not use the Application.
+			This is the Privacy Policy of <a href="mailto:ali.rinabor@gmail.com">ali.rinabor@gmail.com</a> (“we”, “them”, or “us”).In this Privacy Policy, we refer to my
+			website and services as the “Application.” Please read on to learn more about my data handling practices.
+			Your use of the Application signifies that you agree with the terms of this Privacy Policy. If you do not
+			agree with the terms of this Privacy Policy, do not use the Application.
 		</p>
 		<p>
 		<h3>Information I Collect</h3>
@@ -93,7 +97,7 @@
 		<p>
 		<h3>Contact Information</h3>
 
-		If you have any questions about this Privacy Policy, please contact me at ali.rinabor@gmail.com. Any
+		If you have any questions about this Privacy Policy, please contact me at <a href="mailto:ali.rinabor@gmail.com">ali.rinabor@gmail.com</a>. Any
 		personally identifiable information provided in connection with inquiries related to this Privacy Policy
 		will be used solely for the purpose of responding to the inquiry and consistent with my Privacy Policy.</p>
 	</ShopModal>
@@ -124,6 +128,15 @@ export default {
 }
 </script>
 <style scoped>
+
+p ul {
+	
+	list-style-type: none;
+}
+
+p {
+	font-family: 'Dancing Script', cursive;
+}
 .modal-body p {
 	text-align: justify;
 	padding: 20px;

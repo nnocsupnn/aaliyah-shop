@@ -31,6 +31,22 @@
   </script>
   
   <style scoped>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(135deg, #37005a69 10%, #a53c036b 100%);
+    border-radius: 10px;
+  }
   .modal-overlay {
     position: fixed;
     top: 0;

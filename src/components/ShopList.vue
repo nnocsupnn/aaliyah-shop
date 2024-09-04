@@ -1,6 +1,10 @@
 <template>
 	<div class="shop">
 		<ShopHeader/>
+		<br/>
+		<h2 style="font-family: 'Open Sans' sans-serif;">Online Deals</h2>
+		<p style="font-family: 'Open Sans';">Deals and Offers are valid when posted but can end quickly. Read the Full Disclaimer and Disclosure</p>
+		<br/>
 		<div class="select">
 			<select v-model="selectedCategory">
 				<option v-for="deal in categories" :key="deal" :value="deal">{{ deal }}</option>
@@ -155,6 +159,14 @@ export default {
 </script>
 
 <style scoped>
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+p {
+	font-style: italic;
+}
 .shop {
 	width: 100% !important;
 }
@@ -186,6 +198,7 @@ select::-ms-expand {
     overflow: hidden;
     border-radius: .25em;
 	margin: 3% 0;
+	margin-top: 0% !important;
 }
 
 select {
