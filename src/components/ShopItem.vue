@@ -157,7 +157,7 @@ body {
   width: 50%;
   height: 100%;
   /* background-color: #464646; */
-  background-image: linear-gradient( 135deg, #37005a69 10%, #a53c036b 100%);
+  background-image: linear-gradient(135deg, #37005a69 10%, #a53c036b 100%);
 }
 
 .info-inner {
@@ -174,8 +174,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: 25px;
-  background-image: linear-gradient( 90deg, #37005a69 5%, #a53c036b 100%);
-
+  background-image: linear-gradient(90deg, #37005a69 5%, #a53c036b 100%);
 }
 
 .info-inner .p-name,
@@ -184,13 +183,13 @@ body {
 }
 
 .info-inner .p-name {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   color: #ffffff;
 }
 
 .info-inner .p-company {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: #f1f1f1;
@@ -211,7 +210,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: -20px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #828282;
   opacity: 0;
 }
@@ -227,7 +226,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
@@ -296,20 +295,16 @@ a {
 <template>
   <div class="el-wrapper">
     <div class="box-up">
-      <img class="img" :src="item.img_link" alt="">
+      <img class="img" :src="item.img_link" alt="" />
       <a :href="item.product_link" target="_blank">
-
         <div class="img-info">
           <div class="info-inner">
             <span class="p-name">{{ item.name }} #ad</span>
             <span class="p-company">${{ item.full_price }}</span>
           </div>
-          <div class="a-size">
-            {{ item.description }} #ad
-          </div>
+          <div class="a-size">{{ item.description }} #ad</div>
         </div>
       </a>
-
     </div>
 
     <div class="box-down">
@@ -319,45 +314,44 @@ a {
 
       <!-- <Rating :rate="item.ratings.rate || 1.0" :ratings="item.ratings.ratings" /> -->
 
-      <a class="cart" @click="copyCode(item)">
+      <a class="cart" @click="copyCode()">
         <span class="price">${{ item.price }}</span>
         <span class="add-to-cart">
-          <span class="txt">{{ item.copyCodeText }}</span>
+          <span class="txt">{{ copyCodeText }}</span>
         </span>
       </a>
     </div>
   </div>
 </template>
 
-<script>
-import Rating from './Rating.vue';
+<script setup>
+import { defineProps, ref } from "vue";
+import { useToast } from "vue-toast-notification";
+import Rating from "./Rating.vue";
 
-export default {
-  name: 'ShopItem',
-  components: {
-    Rating
+const $toast = useToast();
+const props = defineProps({
+  item: {
+    type: Object,
+    required: true,
   },
-  data() {
-    return {
-      copyCodeText: 'Copy Code'
-    }
-  },
-  props: {
-    item: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    copyCode(item) {
-      item.copyCodeText = 'Copied!'
-      navigator.clipboard.writeText(item.promo_code)
+});
 
-      setInterval(() => item.copyCodeText = 'Copy Code', 800)
-    }
-  },
-  mounted() {
+// Local state for button text
+const copyCodeText = ref("Copy Code");
 
-  }
-}
+const copyCode = () => {
+  copyCodeText.value = "Copied!";
+  navigator.clipboard.writeText(props.item.promo_code);
+
+  $toast.success(`Code ${props.item.promo_code} copied to clipboard.`, {
+    position: "top-right",
+    duration: 1500,
+  });
+
+  // Reset text after 800ms
+  setTimeout(() => {
+    copyCodeText.value = "Copy Code";
+  }, 800);
+};
 </script>
