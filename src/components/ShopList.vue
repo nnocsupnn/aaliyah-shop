@@ -66,7 +66,7 @@ const getData = async () => {
   try {
     isLoading.value = true; // ✅ Start loading
     const response = await fetch(
-      "https://aaliyah-shop-backend.vercel.app/api/shoplist"
+      "http://api.aaliyahawesomedeals.shop/api/shoplist"
     );
     const data = await response.json();
     deals.value = data;
