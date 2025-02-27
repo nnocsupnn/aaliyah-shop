@@ -1,6 +1,9 @@
 {
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/sheets/server.js" }
+    "crons": [
+      {
+        "path": "/api/generate-json",
+        "schedule": "0 * * * *"
+      }
     ]
   }
   
