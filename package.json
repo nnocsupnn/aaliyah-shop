@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
+    "aaliyah": "file:",
     "googleapis": "^105.0.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
