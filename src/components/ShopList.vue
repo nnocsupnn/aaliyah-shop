@@ -66,7 +66,7 @@ const getData = async () => {
   try {
     isLoading.value = true; // ✅ Start loading
     const response = await fetch(
-      "http://api.aaliyahawesomedeals.shop/api/shoplist"
+      "https://api.aaliyahawesomedeals.shop/api/shoplist"
     );
     const data = await response.json();
     deals.value = data;
