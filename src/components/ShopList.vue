@@ -3,7 +3,7 @@
   <div class="shop" v-else>
     <ShopHeader />
     <br />
-    <h2 style="font-family: 'Open Sans' sans-serif">Online Deals</h2>
+    <h2 id="shop-container" style="font-family: 'Open Sans' sans-serif">Online Deals</h2>
     <p style="font-family: 'Open Sans'">
       Deals and Offers are valid when posted but can end quickly. Read the Full
       Disclaimer and Disclosure
@@ -136,11 +136,20 @@ const paginatedItems = computed(() => {
   return filteredItems.value.slice(start, end);
 });
 
+const scrollToDiv = () => {
+  const element = document.getElementById("shop-container");
+  if (element) {
+    window.scrollTo({ top: element.offsetTop, behavior: "smooth" });
+  }
+}
+
 const prevPage = () => {
   if (currentPage.value > 1) currentPage.value--;
+  scrollToDiv()
 };
 const nextPage = () => {
   if (currentPage.value < totalPages.value) currentPage.value++;
+  scrollToDiv()
 };
 
 // ✅ Return isLoading so Vue can access it in template
