@@ -47,10 +47,10 @@ app.get("/generate-json", async (req, res) => {
         }
 
         // Save JSON to a file
-        const outputPath = process.env.OUTPUT_PATH || "output.json";
-        fs.writeFileSync(outputPath, JSON.stringify(sheetData, null, 2));
+        // const outputPath = process.env.OUTPUT_PATH || "output.json";
+        // fs.writeFileSync(outputPath, JSON.stringify(sheetData, null, 2));
 
-        res.json({ success: true, message: "JSON file generated", data: sheetData });
+        res.json(sheetData);
     } catch (error) {
         console.error("Error fetching Google Sheets data:", error);
         res.status(500).json({ success: false, message: "Error fetching data" });
